@@ -123,7 +123,9 @@ namespace NuGet.Commands
                 _request.Project,
                 graphs,
                 localRepositories,
-                contextForProject);
+                contextForProject,
+                _request,
+                _includeFlagGraphs);
 
             // If the request is for a v1 lock file then downgrade it and remove all v2 properties
             if (_request.LockFileVersion == 1)
